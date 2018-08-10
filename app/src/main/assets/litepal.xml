@@ -5,6 +5,6 @@
     <list>
         <mapping class="edu.just.dusin.coolweather2.db.Province"/>
         <mapping class="edu.just.dusin.coolweather2.db.City"/>
-        <mapping class="edu.just.dusin.coolweather2.db.Province"/>
+        <mapping class="edu.just.dusin.coolweather2.db.County"/>
     </list>
 </litepal>
