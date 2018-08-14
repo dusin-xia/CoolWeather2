@@ -1,5 +1,6 @@
 package edu.just.dusin.coolweather2;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -25,6 +26,7 @@ import java.io.IOException;
 
 import edu.just.dusin.coolweather2.gson.Forecast;
 import edu.just.dusin.coolweather2.gson.Weather;
+import edu.just.dusin.coolweather2.service.AutoUpdateService;
 import edu.just.dusin.coolweather2.util.HttpUtil;
 import edu.just.dusin.coolweather2.util.Utility;
 import okhttp3.Call;
@@ -214,6 +216,8 @@ public class WeatherActivity extends AppCompatActivity {
         comfortText.setText(comfort);
         carWashText.setText(carWash);
         sportText.setText(sport);
+        weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
         weatherLayout.setVisibility(View.VISIBLE);
     }
 }
